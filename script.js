@@ -46,13 +46,12 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll("nav-item").forEach(
-  (n) => n.addEventListener("click"),
-  () => {
+document.querySelectorAll(".nav-item").forEach((n) => {
+  n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-  }
-);
+  });
+});
 
 // mega - menu - media - accordion
 const faqs = document.querySelectorAll(".faq");
